@@ -190,7 +190,7 @@ body{
           color: #fff;
           /* margin-top: 15px; */
           float: right;
-          transform: translateX(-60px);
+          transform: translateX(-20px);
       }
   
       #fa-fa:hover .menu1{
@@ -228,16 +228,35 @@ body{
 }
 
 @media screen and (max-width:575px){
-    section h1{
-        font-size: 15vw;
+    .bro h1{
+        font-size: 60px;
+        font-weight: 600;
     }
 }
 
-@media screen and (max-width:1010px){
-    section h3{
-        font-size: 5vw;
+@media screen and (max-width:575px){
+    .bro h3{
+        font-size: 30px;
+        font-weight: 200;
     }
 }
+
+@media screen and (max-height:575px){
+    .bro h1{
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    .bro h3{
+        font-size: 30px;
+        font-weight: 200;
+    }
+
+    #text{
+        padding-top: 50px;
+    }
+}
+
 
 
 
