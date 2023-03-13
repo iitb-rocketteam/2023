@@ -1,449 +1,422 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="rt.css">
-  <link rel="stylesheet" href="rtpage1menu.css">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="rt.css">
+    <link rel="stylesheet" href="rtpage1menu.css">
+    <link rel="stylesheet" href="style.css">
+    <title>SUBSYSTEM</title>
+    <link rel="icon" href="rtlogo1.png" type="image/x-icon">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
     body {
-      background-image: url("Blubac.png");
-      background-size: cover;
-      height: 100vh;
-      margin: 0;
-      box-sizing: border-box;
+        background-image: url("Blubac.png");
+        background-size: cover;
+        /* height:100vh; */
+        background-repeat: no-repeat;
     }
+
+    .line {
+        padding-top: 10vh;
+    }
+
+    .line1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3vh;
+    }
+
+    .line2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 3vh;
+    }
+
+    .line3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 28%;
+        padding-right: 28%;
+    }
+
+    .line>div {
+
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        font-weight: bolder;
+    }
+
+    .line>div:hover {
+        scale: 1.1;
+    }
+
+    .photo {
+        height: 145px;
+        width: 145px;
+        border-radius: 50%;
+        background-color: #02203d;
+    }
+
+    #box1 .photo {
+        background-image: url("3.png");
+        background-size: cover;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #box2 .photo {
+        background-image: url("2.png");
+        background-size: cover;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #box3 .photo {
+        background-image: url("1.png");
+        background-size: cover;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #box4 .photo {
+        background-image: url("4.png");
+        background-size: cover;
+        background-size: 90px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #box5 .photo {
+        background-image: url("5.png");
+        background-size: cover;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+
+
+
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        /* Stay in place */
+        z-index: 10000000;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: hidden;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Black w/ opacity */
+
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background: transparent;
+        margin: 3% auto;
+        /* 15% from the top and centered */
+
+
+        width: 95%;
+        /* Could be more or less, depending on screen size */
+
+    }
+
+    .modal-content img {
+        width: 70%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #2596be;
+        float: right;
+        font-size: 40px;
+        font-weight: bold;
+
+
+    }
+
+    .closebt {
+        height: 5vh;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: rgb(191, 79, 79);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
     @media only screen and (max-width: 700px) {
-     .circle img{
-      height:300px;
-      width:300px;
-     }
-     #rdiv{
-      transform: translateX(
-        400px
-      );
-      visibility: hidden;
-     }
-     #rocket{
-      transform: translateX(
-        400px
-      );
-      visibility: hidden;
-     }
-}
-    .mainc {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 45%;
+        .line {
+            flex-direction: column;
+        }
+
+        .body {
+            display: table;
+            background-image: url("Blubac.png");
+            background-size: 100%;
+            height: 200%;
+            background-repeat: no-repeat;
+        }
+
+        .line2>div {
+            padding-top: 20px;
+        }
+
+        .line3>div {
+            padding-top: 20px;
+        }
+
+        .line2 {
+
+            padding-top: 1vh;
+        }
+
+        .line3 {
+            padding-top: 1vh;
+        }
+
+        .modal-content {
+            margin-top: 50%;
+
+
+
+
+
+        }
     }
-
-    .center-circle {
-      width: 150px;
-      height: 150px;
-      background-color: #02203d;
-      border-radius: 50%;
-      position: absolute;
-      top: 100px;
-      left: calc(50% - 50px);
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-      color:#0ff;
-      
-    }
-
-    .center-circle p {
-      padding-left: 20px;
-    }
-
-    .center-circle:hover {
-      transform: scale(1.2);
-    }
-
-    .center-circle img {
-      padding-top: 4.5px;
-      width: 60%;
-      height:auto;
-      position:relative;
-      left:30px;
-      top:23px;
-      
-    }
-
-    p {
-      padding-left: 25px;
-      color: white;
-      font-family: "Poppins";
-      font-size: 20px;
-      margin-top:60px;
-    }
-
-
-    .bottom-circle {
-      width: 150px;
-      height: 150px;
-      background-color: #02203d;
-      border-radius: 50%;
-      position: absolute;
-      top: 250px;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-      
-    }
-
-
-    .bottom-circle:hover {
-      transform: scale(1.2);
-    }
-
-    .bottom-circle.left {
-      left: calc(50% - 300px);
-    }
-
-    .bottom-circle.left img {
-      padding-top: 5px;
-      padding-left: 2px;
-      width: 60%;
-      height:auto;
-      position:relative;
-      left:30px;
-      top:23px;
-    }
-
-    .bottom-circle.right {
-      left: calc(50% + 200px);
-    }
-
-    .bottom-circle.right img {
-      padding-top: 5px;
-      width: 60%;
-      height:auto;
-      position:relative;
-      left:30px;
-      top:23px;
-    }
-
-    .bottom-circle p {
-
-      padding-left: 30px;
-    }
-
-    .bottom-circle-2 {
-      width: 150px;
-      height: 150px;
-      background-color: #02203d;
-      border-radius: 50%;
-      position: absolute;
-      top:500px;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-     
-    }
-
-    .bottom-circle-2:hover {
-      transform: scale(1.2);
-    }
-
-    .bottom-circle-2.left {
-      /* top: 550px; */
-      left: calc(50% - 250px);
-    }
-
-    .bottom-circle-2.left img {
-      padding-top: 15px;
-      padding-left: 3px;
-      width: 60%;
-      height:auto;
-      position:relative;
-      left:25px;
-      top:15px;
-    }
-
-    .bottom-circle-2.right {
-      /* top: 550px; */
-      left: calc(50% + 150px);
-    }
-    .bottom-circle-2.right img{
-      width: 60%;
-      height:auto;
-      position:relative;
-      left:30px;
-      top:33px;
-    }
-
-    .bottom-circle-2.left p {
-      padding-left: 30px;
-     
-    }
-
-    .bottom-circle-2.right p {
-      padding-left: 30px;
-      margin-top: 70px;
-    }
-
-   
-
-    #rocket {
-      position: absolute;
-      left: 50vw;
-      top: 50vh;
-      transform: translate(-50%, -50%);
-      transform-origin: 50% 100%;
-      height: 100px;
-    }
-
-   /* The Modal (background) */
-.modal {
-  display: none; 
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
- 
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background: transparent;
-  margin: 3% auto; /* 15% from the top and centered */
- 
- 
-  width: 95%; /* Could be more or less, depending on screen size */
-  
-}
-.modal-content img{
-  width:70%;
-}
-/* The Close Button */
-.close {
-  color: #2596be;
-  float: right;
-  font-size: 40px;
-  font-weight: bold;
- 
-  
-}
-.closebt{
-  height:5vh;
-}
-.img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.close:hover,
-.close:focus {
-  color: rgb(191, 79, 79);
-  text-decoration: none;
-  cursor: pointer;
-}
-  </style>
-</head>
+</style>
 
 <body>
-  <div class="wrapper">
     <div class="navigation">
-      <div class="logo"><img src="rtlogo1.png" width=100px></div>
-      <ul>
-        <li class="menu10">
-          <a href="index.html">Home </a>
-        </li>
-        <li class="dropdown menu10">
-          <a class="dropbtn" href="Untitled-1.html">TEAM</a>
+        <div class="logo"><img src="rtlogo1.png" width=100px height=auto></div>
+        <ul>
+            <li class="menu10">
+                <a href="index.html">Home </a>
+            </li>
+            <li class="dropdown menu10">
+                <a class="dropbtn" href="#">TEAM</a>
 
-          <div class="dropdown-content">
-            <a href="Untitled-1.html#prop">Propulsion <i class="fa-solid fa-wind"></i></a>
-            <a href="Untitled-1.html#avio">Avionics <i class="fa-solid fa-screwdriver-wrench"></i></a>
-            <a href="Untitled-1.html#reco">Recovery <i class="fa-solid fa-parachute-box"></i></a>
-            <a href="Untitled-1.html#airf">Airframe <i class="fa-solid fa-rocket"></i></a>
-            <a href="Untitled-1.html#busi">Business <i class="fa-solid fa-handshake"></i></a>
-          </div>
-        </li>
-        <li class="menu10"><a href="gallery.html">Gallery</a></li>
-        <li class="menu10"><a href="trial.html">Subsystems</a></li>
-        <li class="menu10"><a href="faq.html">FAQs</a></li>
-        <li class="menu10"><a href="contact.html">Contact Us</a></li>
+                <div class="dropdown-content">
+                    <a href="#prop" class="iteml">PROPULSION &nbsp; &nbsp; <i class="fa-solid fa-wind fa-lg"></i></a>
+                    <a href="#avio" class="iteml">AVIONICS &nbsp; &nbsp; <i
+                            class="fa-solid fa-screwdriver-wrench"></i></a>
+                    <a href="#reco" class="iteml">RECOVERY &nbsp; &nbsp; <i class="fa-solid fa-parachute-box"></i></a>
+                    <a href="#airf" class="iteml">AIRFRAME &nbsp; &nbsp; <i class="fa-solid fa-rocket"></i></a>
+                    <!-- <a href="#payl">Payload</a> -->
+                    <a href="#busi" class="iteml">BUSINESS &nbsp; &nbsp; <i class="fa-solid fa-handshake"></i></a>
+                </div>
+            </li>
+            <li class="menu10"><a href="gallery.html">Gallery</a></li>
+            <li class="menu10"><a href="trial.html">Subsystems</a></li>
+            <li class="menu10"><a href="faq.html">FAQs</a></li>
+            <li class="menu10"><a href="contact.html">CONTACT US</a></li>
 
-        <li id="fa-fa">
-          <a href="#" class="menu2"><i class="fa fa-bars"></i></a>
-          <div class="menu1">
-              <a href="index.html">HOME</a>
-              <a href="Untitled-1.html">TEAM</a>
-              <a href="gallery.html">GALLERY</a>
-              <a href="trial.html">SUBSYSTEMS</a>
-              <a href="faq.html">FAQs</a>
-              <a href="contact.html">CONTACT-US</a>
-          </div>
-      </li>
+            <li id="fa-fa">
+                <a href="#" class="menu2"><i class="fa fa-bars"></i></a>
+                <div class="menu1">
+                    <a href="index.html">HOME</a>
+                    <a href="Untitled-1.html">TEAM</a>
+                    <a href="gallery.html">GALLERY</a>
+                    <a href="trial.html">SUBSYSTEMS</a>
+                    <a href="faq.html">FAQs</a>
+                    <a href="contact.html">CONTACT-US</a>
+                </div>
+            </li>
 
-      </ul>
-      <div class="mainc" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-duration="1500">
-        <div class="center-circle circle" onclick="document.getElementById('mymodal1').style.display='block'"><img
-            src="3.png" width=145px height="145px"
-            onclick="openModalP()">
-          <p>PROPULSION</p>
+        </ul>
+
+
+    </div>
+    <div class="cont">
+        <div class="line1 line">
+            <div id="box1" onclick="document.getElementById('mymodal1').style.display='block'">
+                <div class="photo"></div>
+                <div>PROPULSION</div>
+            </div>
         </div>
-        <div class="bottom-circle left circle" onclick="document.getElementById('mymodal2').style.display='block'"><img src="2.png" width=145px
-            height="140px" onclick="openModalAV()">
-          <p>AVIONICS</p>
+
+        <div class="line2 line">
+            <div id="box2" onclick="document.getElementById('mymodal2').style.display='block'">
+                <div class="photo"></div>
+                <div>AVIONICS</div>
+            </div>
+            <div id="box3" onclick="document.getElementById('mymodal3').style.display='block'">
+                <div class="photo"></div>
+                <div>RECOVERY</div>
+            </div>
         </div>
-        <div class="bottom-circle right circle" onclick="document.getElementById('mymodal3').style.display='block'"><img src="1.png" width=150px
-            height="140px" onclick="openModalR()">
-          <p>RECOVERY</p>
+        <div class="line3 line">
+            <div id="box4" onclick="document.getElementById('mymodal4').style.display='block'">
+                <div class="photo"></div>
+                <div>AIRFRAME</div>
+            </div>
+            <div id="box5" onclick="document.getElementById('mymodal5').style.display='block'">
+                <div class="photo"></div>
+                <div>BUSINESS</div>
+            </div>
         </div>
-        <div class="bottom-circle-2 left circle" onclick="document.getElementById('mymodal4').style.display='block'"><img src="4.png"
-            width="125px" onclick="openModalAI()">
-          <p>AIRFRAME</p>
-        </div>
-        <div class="bottom-circle-2 right circle" onclick="document.getElementById('mymodal5').style.display='block'"><img src="5.png"
-            width="150px" onclick="openModalB()">
-          <p>BUSINESS</p>
-        </div>
-      </div>
-      <!-- The Modal -->
-      <div id="mymodal1" class="modal">
+    </div>
+
+
+
+    <!-- The Modal -->
+    <div id="mymodal1" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="closebt"><span class="close1 close">&times;</span></div>
-         <div class="img">
-          <img src="prop.png" alt="error loading image">
-         </div>
-          
+            <div class="closebt"><span class="close1 close">&times;</span></div>
+            <div class="img">
+                <img src="prop.png" alt="error loading image">
+            </div>
+
         </div>
 
-      </div>
-      <div id="mymodal2" class="modal">
+    </div>
+    <div id="mymodal2" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="closebt"><span class="close2 close">&times;</span></div>
-         <div class="img">
-          <img src="avio.png" alt="error loading image">
-         </div>
-          
+            <div class="closebt"><span class="close2 close">&times;</span></div>
+            <div class="img">
+                <img src="avio.png" alt="error loading image">
+            </div>
+
         </div>
 
-      </div>
-      <div id="mymodal3" class="modal">
+    </div>
+    <div id="mymodal3" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="closebt"><span class="close3 close">&times;</span></div>
-         <div class="img">
-          <img src="reco.png" alt="error loading image">
-         </div>
-          
+            <div class="closebt"><span class="close3 close">&times;</span></div>
+            <div class="img">
+                <img src="reco.png" alt="error loading image">
+            </div>
+
         </div>
 
-      </div>
-      <div id="mymodal4" class="modal">
+    </div>
+    <div id="mymodal4" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="closebt"><span class="close4 close">&times;</span></div>
-         <div class="img">
-          <img src="airf.png" alt="error loading image">
-         </div>
-          
+            <div class="closebt"><span class="close4 close">&times;</span></div>
+            <div class="img">
+                <img src="airf.png" alt="error loading image">
+            </div>
+
         </div>
 
-      </div>
-      <div id="mymodal5" class="modal">
+    </div>
+    <div id="mymodal5" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="closebt"><span class="close5 close">&times;</span></div>
-         <div class="img">
-          <img src="busi.png" alt="error loading image">
-         </div>
-          
+            <div class="closebt"><span class="close5 close">&times;</span></div>
+            <div class="img">
+                <img src="busi.png" alt="error loading image">
+            </div>
+
         </div>
 
-      </div>
-      <!-- <div id="rdiv" >
-        <img id="rocket"  src="https://cdn-icons-png.flaticon.com/512/868/868876.png" alt="Rocket">
-      </div> -->
-     
-
-      <script>
-        const rocket = document.getElementById("rocket");
-        const rocketCoords = rocket.getBoundingClientRect();
-        const centerX = rocketCoords.left + rocket.width / 2;
-        const centerY = rocketCoords.top + rocket.height;
-
-        document.addEventListener("mousemove", function (event) {
-          const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX) + 0.618;
-          rocket.style.transform = `rotate(${angle}rad)`;
+    </div>
 
 
-        });
-      </script>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
-      <script>
+
+
+    <script>
 
         // Get the modal
-var modal1 = document.getElementById("mymodal1");
-var modal2 = document.getElementById("mymodal2");var modal3 = document.getElementById("mymodal3");
-var modal4 = document.getElementById("mymodal4");var modal5 = document.getElementById("mymodal5");
+        var modal1 = document.getElementById("mymodal1");
+        var modal2 = document.getElementById("mymodal2"); var modal3 = document.getElementById("mymodal3");
+        var modal4 = document.getElementById("mymodal4"); var modal5 = document.getElementById("mymodal5");
         // Get the <span> element that closes the modal
-var span1 = document.getElementsByClassName("close1")[0];
-var span2 = document.getElementsByClassName("close2")[0];
-var span3 = document.getElementsByClassName("close3")[0];
-var span4 = document.getElementsByClassName("close4")[0];
-var span5 = document.getElementsByClassName("close5")[0];
+        var span1 = document.getElementsByClassName("close1")[0];
+        var span2 = document.getElementsByClassName("close2")[0];
+        var span3 = document.getElementsByClassName("close3")[0];
+        var span4 = document.getElementsByClassName("close4")[0];
+        var span5 = document.getElementsByClassName("close5")[0];
 
 
 
-// When the user clicks on <span> (x), close the modal
-span1.onclick = function() {
-  modal1.style.display = "none";
-  
-}
-span2.onclick = function() {
-  modal2.style.display = "none";
-  
-}
-span3.onclick = function() {
-  modal3.style.display = "none";
-  
-}
-span4.onclick = function() {
-  modal4.style.display = "none";
-  
-}
-span5.onclick = function() {
-  modal5.style.display = "none";
-  
-}
+        // When the user clicks on <span> (x), close the modal
+        span1.onclick = function () {
+            modal1.style.display = "none";
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-  modal1.style.display = "none";
-  modal2.style.display = "none";
-  modal3.style.display = "none";
-  modal4.style.display = "none";
-  modal5.style.display = "none";
-  }
-}
-      </script>
+        }
+        span2.onclick = function () {
+            modal2.style.display = "none";
+
+        }
+        span3.onclick = function () {
+            modal3.style.display = "none";
+
+        }
+        span4.onclick = function () {
+            modal4.style.display = "none";
+
+        }
+        span5.onclick = function () {
+            modal5.style.display = "none";
+
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal1.style.display = "none";
+                modal2.style.display = "none";
+                modal3.style.display = "none";
+                modal4.style.display = "none";
+                modal5.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 
 </html>
