@@ -8,6 +8,11 @@ body{
 	padding:0;
 	box-sizing: border-box;
 }
+.arrow {
+	font-size: 90px;
+	padding: 0px 700px;
+	padding-top: 0px;
+}
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -111,7 +116,3 @@ ul{
     width: 100%;
 }
 }
-
-
-
-
