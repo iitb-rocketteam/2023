@@ -135,7 +135,7 @@
         <section class="header" style="background-image:linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)), url(blog1.jpeg) ;" >
             <nav>
                 <a href="index.html"><img src="rtlogo1.png"></a>
-                <div class="nav-links" id="navLinks ">
+                <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="index.html">HOME</a></li>
@@ -144,13 +144,13 @@
                         <li><a href="sponsor.html">SPONSOR</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="subsystem.html">SUBSYSTEM</a></li>
-                        <li><a href="contact2.html">CONTACT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars"onclick="showMenu()"></i>
             </nav>
             <div class="text-box">
-                <h1 data-aos="zoom-out"style="font-size: 70px;opacity: 1; margin-top:-30px;">IIT BOMBAY ROCKET TEAM</h1>
+                <h1 data-aos="zoom-out"style="">IIT BOMBAY ROCKET TEAM</h1>
                 <p data-aos="fade-right" style="font-size: 20px;opacity: 1;margin-top:-8px;">Achieving New Frontiers in High Powered Rockerty</p>
                 <!-- <a href="index.html" style="margin: -10px;" data-aos="zoom-out" class="hero-btn">Visit Us To Know More</a> -->
     
@@ -424,13 +424,15 @@
         <script>
             var navLinks = document.getElementById("navLinks");
             function showMenu(){
-                navLinks.style.right =  "0";
+                navLinks.style.right =  "10px";
             } 
             function hideMenu(){
-                navLinks.style.right =  "-200px";
+                navLinks.style.right =  "-2000px";
             } 
 
-
+            AOS.init({
+            duration: 1200,
+            })
 
         </script>
 
@@ -445,10 +447,7 @@
 
  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
- <script> AOS.init({
-    duration: 1200,
-  })
-  </script>
+
 
 </body>
 </html>
