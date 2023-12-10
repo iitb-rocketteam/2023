@@ -424,10 +424,13 @@
         <script>
             var navLinks = document.getElementById("navLinks");
             function showMenu(){
-                navLinks.style.right =  "10px";
+                navLinks.style.display = "block"; // Set display to block to show the menu
+                navLinks.style.right = "10px";
             } 
             function hideMenu(){
-                navLinks.style.right =  "-2000px";
+                navLinks.style.right = "-2000px";
+                navLinks.style.display = "none"; // Set display to none to hide the menu
+
             } 
 
             AOS.init({
