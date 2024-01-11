@@ -65,12 +65,10 @@ nav img{
 }
 .text-box{
 
-width:90%;
+width:100%;
 color: #fff;
 position:absolute;
-top:30%;
-left:50%;
-transform: translate(-50%,50%);
+
 text-align: center;
 
 }
@@ -733,8 +731,5 @@ body::before {
 
 .arrow {
     font-size: 90px;
-    padding: 0px 700px;
-    padding-top: 0px;
-    margin-left: -495px;
-    margin-bottom: -60px;
+
 }
