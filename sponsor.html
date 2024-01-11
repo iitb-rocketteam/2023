@@ -20,9 +20,19 @@
 
 <style>
 
+.brochure{
+    margin: 50px;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 @media(min-width:701px){
+
+   
     .sponsor1 {
 
         margin-left:150px;
@@ -139,26 +149,21 @@ body{
     max-width: 100%;
     overflow-x: hidden;
 }
+
 .brochure{
-    margin-top: 50px;
-}
-.brchrBtn{
-margin-left: 230px;
-}
+    margin: 0;
+        padding: 20px;
+    }
+
+
 
 .current-sponsor{
    margin-left:30px;
 }
 }
 @media (min-width: 701px) {
-    .brochure {
-      margin-left: 430px;
-      margin-top: 180px;
-      margin-right: 90px;
-    }
-    .brchrBtn{
-    margin-left: 230px;
-}
+    
+
 .current-sponsor{
     margin-left:100px ;
 }
@@ -396,12 +401,11 @@ margin-left: 230px;
 </section>
 
 <section class="brochure">
-    <div >
-        <h1 data-aos="zoom-out"style="font-size: 40px;opacity: 1; margin-top:-40px;margin-left:130px;">LINK TO BROCHURE</h1>
+    
+        <h1 data-aos="zoom-out"style="font-size: 40px;opacity: 1; ">LINK TO BROCHURE</h1>
         
         <a  href="https://drive.google.com/file/d/1fwSQTixtbm_Nr1fEM8QBHPJ9LmfSgrA5/view" target="_blank" data-aos="zoom-out" class="hero-btn brchrBtn">View Brochure</a>
     
-    </div>
     
 </section>
 
@@ -489,20 +493,16 @@ margin-left: 230px;
         <script>
             var navLinks = document.getElementById("navLinks");
             function showMenu(){
-                navLinks.style.display = "block"; // Set display to block to show the menu
-                navLinks.style.right = "10px";
+                navLinks.style.right =  "0";
             } 
             function hideMenu(){
-                navLinks.style.right = "-2000px";
-                navLinks.style.display = "none"; // Set display to none to hide the menu
-
+                navLinks.style.right =  "-200px";
             } 
 
-            AOS.init({
-            duration: 1200,
-            })
+
 
         </script>
+
         <script src="index.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
